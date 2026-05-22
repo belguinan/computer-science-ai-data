@@ -1,6 +1,6 @@
 # Computer Science, AI, and Data Science — Research Methodology
 
-Welcome to the official repository for **Computer Science, Artificial Intelligence, and Data Science** methodologies, hosted by the [Research-Methodology-Hub](https://github.com/Research-Methodology-Hub).
+Welcome to the repository for **Computer Science, Artificial Intelligence, and Data Science** methodologies, hosted by the [Research-Methodology-Hub](https://github.com/Research-Methodology-Hub).
 
 This repository aims to provide standardized guidelines, frameworks, and templates to improve reproducibility, rigor, and structure in computing and data-driven research.
 
