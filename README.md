@@ -1,22 +1,35 @@
-# Computer Science, AI, and Data Science — Research Methodology
+# Research Methodology Hub
 
-> Standardized guidelines, frameworks, and templates for rigorous, reproducible research in Computer Science, Artificial Intelligence, and Data Science.
+> Standardized, step-by-step **research-methodology guides across disciplines** — built for reproducibility, rigor, and structure.
 
 ![Status](https://img.shields.io/badge/status-early%20stage-orange)
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 ![Org](https://img.shields.io/badge/org-Research--Methodology--Hub-black)
 
-This guide was built to make rigorous, reproducible research accessible to everyone. 🔬 by Mohamed El hajji and the community.
+This project was built to make rigorous, reproducible research accessible to everyone — across disciplines. 🔬 by Mohamed El Hajji and the community.
 
-> ⚠️ **Early stage.** The methodology guide content is being written. The roadmap below describes where this project is headed.
+> ⚠️ **Early stage.** Guide content is being written and the platform is taking shape. The roadmap below describes where this project is headed.
 
 ---
 
 ## Overview
 
-In modern Computer Science and AI research, **reproducibility is a major challenge**. This repository is an open-source toolbox for researchers, PhD students, and data scientists to follow best practices in data management, model evaluation, and software engineering for science.
+Across disciplines, **reproducibility and methodological rigor are major challenges**. Research Methodology Hub is an open-source toolbox of guidelines, frameworks, and templates that help researchers follow a clear, dependable process — from formulating a problem to disseminating results.
 
-The goal is to provide standardized guidelines, frameworks, and templates that improve **reproducibility, rigor, and structure** in computing and data-driven research.
+Rather than one guide, the Hub hosts **multiple methodology guides**, each tailored to its field but sharing the same structure: an overview of scientific research, followed by an ordered, step-by-step research process.
+
+---
+
+## Methodology guides
+
+| Guide | Domain | Status |
+|-------|--------|--------|
+| **Computer Science & AI** | Computer Science · AI · Data Science | ✅ Available (7 steps) |
+| **Educational Research** | Education · Social Sciences | ✅ Available (7 steps) |
+| **Health Research** | Clinical · Public Health · Biomedical | 🟡 Coming soon |
+| _More disciplines_ | Engineering, Medicine, … | 📋 Planned |
+
+Each guide is **self-contained and kept methodologically distinct** (e.g. the computational workflow — datasets, architectures, benchmarks — is never mixed with the social-science workflow — variables, instruments, sampling). Adding a new methodology is intentionally easy: drop one file into `web/src/guide/methodologies/` and register it.
 
 ---
 
@@ -30,31 +43,22 @@ The goal is to provide standardized guidelines, frameworks, and templates that i
 
 ---
 
-## What the Guide Covers
-
-The methodology guide walks through the full research lifecycle:
-
-1. **Formulate** a research problem, research question, and testable hypotheses
-2. **Select** a fitting methodology — quantitative, qualitative, mixed, or R&D
-3. **Design** an experimental or evaluation protocol
-4. **Collect, document, and analyze** data rigorously
-5. **Critique** scientific publications and build a state of the art
-6. **Write and present** a research report (manuscript, paper, conference) clearly and responsibly
-7. **Integrate** ethics, equity, and reproducibility throughout
-
----
-
 ## Repository Structure
 
 ```
 .
-├── README.md          # You are here
-├── LICENSE            # Apache 2.0
-├── doc/               # Documentation & contribution notes
-└── web/               # Frontend app — React + Vite + TypeScript
+├── README.md            # You are here
+├── CONTRIBUTING.md      # How to contribute
+├── LICENSE              # Apache 2.0
+├── doc/                 # Documentation & community notes
+└── web/                 # Frontend app — React + Vite + TypeScript
+    └── src/
+        ├── brand/                  # Méridien logo & palette
+        ├── guide/methodologies/    # one file per methodology guide
+        └── pages/                  # Landing · Catalogue · GuideEntry · About
 ```
 
-> Guide content, templates, and a future `api/` (backend & AI) will be added as the project grows.
+> A future `api/` (backend & AI services) will be added as the platform grows.
 
 ### Running the web app
 
@@ -62,40 +66,43 @@ The methodology guide walks through the full research lifecycle:
 cd web
 npm install
 npm run dev      # start the dev server
-npm run build    # production build
+npm run build    # production build (also type-checks)
 ```
 
 ---
 
 ## How to Use This Repository
 
-1. **Explore** — browse the folders to find guidelines matching your research topic.
-2. **Clone** — get a local copy to use the templates:
+1. **Explore** — browse the methodology guides and find the one matching your discipline.
+2. **Clone** — get a local copy:
    ```bash
    git clone https://github.com/Research-Methodology-Hub/Research-Methodologies.git
    ```
-3. **Adapt** — modify the templates to fit your specific research project and constraints.
+3. **Adapt** — modify the templates and steps to fit your specific research project and constraints.
 
 ---
 
 ## Roadmap / Coming Soon
 
-Beyond the written guide, the project aims to deliver the methodology through an interactive platform:
+Beyond the written guides, the project aims to deliver methodology through an interactive platform:
 
-- 🌐 **Web app** — read the guide, search, and follow interactive lessons
-- 📱 **Mobile app** — learn on the go
-- 🤖 **AI assistant** — a research-methodology chatbot and agent (MCP + skills)
-- 🎬 **Learning formats** — quizzes, infographics, case studies, slides, and videos
-- 🔗 **Integrations** — Google Colab, Notion
+- 🧭 **Methodology Master** — an AI agent that mentors researchers step-by-step
+- 💬 **AI assistant / chatbot** — grounded Q&A over the guides (MCP + skills)
+- 🧪 **Decision aid** — "which methodology should I use?" wizard
+- 🎯 **Quizzes & self-assessment** per step
+- 🎬 **Learning formats** — infographics, case studies, slides, and videos
+- 📱 **Mobile app** · 🔗 **Integrations** (Google Colab, Notion)
+
+See [doc/community-issues.md](doc/community-issues.md) for the flagship epics.
 
 ### Planned Tech Stack
 
-| Layer          | Technology                        | Status              |
-|----------------|-----------------------------------|---------------------|
-| **Frontend**   | React + Vite (JS/TS, HTML, CSS)   | ✅ Confirmed        |
-| **Backend**    | Node.js (JS/TS)                   | 🟡 Under evaluation |
-| **AI / Agent** | MCP + Skills                      | ✅ Confirmed        |
-| **CI/CD**      | Automated pipeline (agent-driven) | ✅ Confirmed        |
+| Layer          | Technology                              | Status              |
+|----------------|-----------------------------------------|---------------------|
+| **Frontend**   | React + Vite + TypeScript, React Router | ✅ Confirmed        |
+| **Backend**    | Node.js (`api/`)                        | 🟡 Under evaluation |
+| **AI / Agent** | MCP + Skills.                           | ✅ Confirmed        |
+| **CI/CD**      | GitHub Actions                          | ✅ Confirmed        |
 
 > The stack is planned and may evolve as the platform takes shape.
 
@@ -103,13 +110,9 @@ Beyond the written guide, the project aims to deliver the methodology through an
 
 ## Contributing
 
-Contributions are what make the research community vibrant! If you have a methodology framework, a template, or a best-practice guide to share:
+Contributions are what make the research community vibrant — fixes, new methodology guides, and improvements are all welcome. Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** for the workflow, local checks, and our Conventional-Commit + AI-assistance conventions.
 
-1. **Fork** the project.
-2. Create your feature branch (`git checkout -b feature/MethodologyAddition`).
-3. Commit your changes (`git commit -m 'Add some research methodology'`).
-4. Push to the branch (`git push origin feature/MethodologyAddition`).
-5. Open a **Pull Request**.
+In short: fork → branch off `main` → run `npm run lint` and `npm run build` in `web/` → open a PR with a Conventional-Commit title.
 
 ---
 
